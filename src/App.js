@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
-import Global from './Global';
-import Footer from './Footer';
-import PopupDetails from './PopupDetails';
+import Global from './components/Global';
+import Footer from './components/Footer';
+import PopupDetails from './components/PopupDetails';
 import './App.css';
 
 class CovidApp extends Component {

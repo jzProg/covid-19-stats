@@ -17,7 +17,7 @@ class Global extends Component {
     return (
       <div>
         <div className='appLogo'>
-          <img src='./covid.png' width='35px' height='35px'/>
+          <img alt='siteLogo' src='./covid.png' width='35px' height='35px'/>
           COVID-19
         </div>
         {this.state.globalMapping.map(item =>
