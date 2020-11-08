@@ -4,7 +4,7 @@ import { Icon } from 'leaflet';
 import Global from './Global';
 import Footer from './Footer';
 import PopupDetails from './PopupDetails';
-import HistoryGraph from './HistoryGraph';
+import GraphsBar from './GraphsBar';
 import '../App.css';
 
 class CovidApp extends Component {
@@ -17,7 +17,6 @@ class CovidApp extends Component {
 
   state = {
     dataUpdated: false,
-    showGraph: false,
     countries: [],
     global: {},
     historical: {},
@@ -29,13 +28,15 @@ class CovidApp extends Component {
   }
 
   render() {
-    const { countries, global, historical, showGraph, dataUpdated } = this.state;
+    const { countries, global, historical, dataUpdated } = this.state;
 
     return (
       <div className="App">
         <header className="App-header">
           <Global globalStats={global}/>
-          <HistoryGraph historyData={historical} dataUpdated={dataUpdated}/>
+          <GraphsBar historical={historical}
+                     countries={countries.sort((a, b) => b.todayCases - a.todayCases).filter((item, index) => index < 10)}
+                     dataUpdated={dataUpdated}/>
           <MapContainer center={[20.505, -0.09]}
                         zoom={3}
                         scrollWheelZoom={false}>

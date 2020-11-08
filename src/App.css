@@ -9,9 +9,6 @@
   font-size: calc(3px + 2vmin);
 }
 
-.globalDiv {
-}
-
 .appLogo {
   float: left;
   padding: 5px;
@@ -19,7 +16,7 @@
 
 .leaflet-container {
   width: 68%;
-  height: 90vh;
+  height: 89vh;
   border-style: solid double;
   border-color: gray;
 }
@@ -45,6 +42,7 @@
 .globalElement {
   width: 30%;
   float: left;
+  padding-bottom: 5px;
 }
 
 .tooltip-wrap {
@@ -53,10 +51,11 @@
 
 .history-graph {
   border-style: solid double;
+  border-color: gray;
   float: left;
   width: 600px;
-  height: 400px;
-  margin: 10px;
+  height: 450px;
+  margin: 0px 10px 10px 10px;
 }
 
 .tickLabel {
@@ -65,5 +64,27 @@
 
 .chartDiv {
   width: 600px;
-  height: 300px;
+  height: 350px;
+}
+
+.top-countries {
+  border-style: solid double;
+  border-color: gray;
+  float: left;
+  width: 600px;
+  height: 420px;
+  margin-top: 480px;
+  margin-left: -614.9px;
+}
+
+.top-countries-text {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.top-countries-text div {
+  border-style: none none solid none;
+  border-width: 2px;
+  border-color: gray;
+  margin-bottom: 1px;
 }

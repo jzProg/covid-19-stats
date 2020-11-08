@@ -30,12 +30,12 @@ export default function HistoryGraph (props) {
 
   return (
     <div className='history-graph'>
-    <h4>Last 30 days(cases - recovered - deaths)</h4>
-    <div className='chartDiv'>
-      {props.dataUpdated && (
-        <Chart data={data} series={series} axes={axes} tooltip />
-      )}
-    </div>
+      <h4>Last 30 days(cases - recovered - deaths)</h4>
+      <div className='chartDiv'>
+        {props.dataUpdated && (
+          <Chart data={data} series={series} axes={axes} tooltip />
+        )}
+      </div>
     </div>
   )
 }
