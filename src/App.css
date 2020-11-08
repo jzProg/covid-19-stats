@@ -9,14 +9,19 @@
   font-size: calc(3px + 2vmin);
 }
 
+.globalDiv {
+}
+
 .appLogo {
   float: left;
   padding: 5px;
 }
 
 .leaflet-container {
-  width: 100%;
+  width: 68%;
   height: 90vh;
+  border-style: solid double;
+  border-color: gray;
 }
 
 .leaflet-popup-content-wrapper {
@@ -37,7 +42,28 @@
   text-align: center;
 }
 
-.globalDiv {
+.globalElement {
   width: 30%;
   float: left;
+}
+
+.tooltip-wrap {
+  z-index: 1000;
+}
+
+.history-graph {
+  border-style: solid double;
+  float: left;
+  width: 600px;
+  height: 400px;
+  margin: 10px;
+}
+
+.tickLabel {
+  fill: white !important;
+}
+
+.chartDiv {
+  width: 600px;
+  height: 300px;
 }
