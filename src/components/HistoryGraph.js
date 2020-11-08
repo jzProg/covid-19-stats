@@ -29,7 +29,7 @@ export default function HistoryGraph (props) {
   )
 
   return (
-    <div className='history-graph'>
+    <div className='history-graph row'>
       <h4>Last 30 days(cases - recovered - deaths)</h4>
       <div className='chartDiv'>
         {props.dataUpdated && (

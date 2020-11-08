@@ -7,11 +7,11 @@ export default function GraphsBar (props) {
   const { historical, dataUpdated, countries } = props;
 
   return (
-    <div className='graphsBar'>
-    <HistoryGraph historyData={historical}
-                  dataUpdated={dataUpdated}/>
-    <TopCountries data={countries}
-                  dataUpdated={dataUpdated}/>
+    <div className='graphsBar col-md-4'>
+      <HistoryGraph historyData={historical}
+                    dataUpdated={dataUpdated}/>
+      <TopCountries data={countries}
+                    dataUpdated={dataUpdated}/>
     </div>
   )
 }

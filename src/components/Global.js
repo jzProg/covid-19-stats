@@ -15,13 +15,13 @@ class Global extends Component {
 
   render() {
     return (
-      <div>
-        <div className='appLogo'>
+      <div className='row'>
+        <div className='appLogo col-md-1'>
           <img alt='siteLogo' src='./covid.png' width='35px' height='35px'/>
           COVID-19
         </div>
         {this.state.globalMapping.map(item =>
-          <div className='globalElement' key={item.key}>
+          <div className='globalElement col-md-3' key={item.key}>
            { item.displayText }
             <span style={{ color: item.isPositive ? 'green' : 'red'}}> { this.props.globalStats[item.key] }</span>
           </div>

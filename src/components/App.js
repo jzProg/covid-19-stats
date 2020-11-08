@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Icon } from 'leaflet';
 import Global from './Global';
 import Footer from './Footer';
-import PopupDetails from './PopupDetails';
 import GraphsBar from './GraphsBar';
+import Map from './Map';
 import '../App.css';
 
 class CovidApp extends Component {
@@ -31,28 +29,16 @@ class CovidApp extends Component {
     const { countries, global, historical, dataUpdated } = this.state;
 
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className='App'>
+        <header className='App-header container'>
           <Global globalStats={global}/>
-          <GraphsBar historical={historical}
-                     countries={countries.sort((a, b) => b.todayCases - a.todayCases).filter((item, index) => index < 10)}
-                     dataUpdated={dataUpdated}/>
-          <MapContainer center={[20.505, -0.09]}
-                        zoom={3}
-                        scrollWheelZoom={false}>
-            <TileLayer attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
-                       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            {countries.map(country =>
-              <Marker key={country.country}
-                      icon={new Icon({ iconUrl: './covid.png', iconSize: [30, 30]})}
-                      position={[country.countryInfo.lat, country.countryInfo.long]}>
-                <Popup>
-                  <PopupDetails info={country}/>
-                </Popup>
-              </Marker>
-            )}
-          </MapContainer>
-         <Footer/>
+          <div className='row'>
+            <GraphsBar historical={historical}
+                       countries={countries.sort((a, b) => b.todayCases - a.todayCases).filter((item, index) => index < 10)}
+                       dataUpdated={dataUpdated}/>
+            <Map countries={countries}/>
+          </div>
+          <Footer/>
         </header>
       </div>
     );
